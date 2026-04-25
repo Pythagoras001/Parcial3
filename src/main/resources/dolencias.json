@@ -1,0 +1,15 @@
+[
+  { "nombreDolencia": "DOLOR_TORACICO", "nivelPrioridad": 3 },
+  { "nombreDolencia": "DIFICULTAD_RESPIRATORIA", "nivelPrioridad": 3 },
+  { "nombreDolencia": "TRAUMA_CRANEOENCEFALICO", "nivelPrioridad": 3 },
+  { "nombreDolencia": "PERDIDA_CONSCIENCIA", "nivelPrioridad": 3 },
+  { "nombreDolencia": "HEMORRAGIA_INTERNA", "nivelPrioridad": 3 },
+
+  { "nombreDolencia": "FRACTURA_LEVE", "nivelPrioridad": 2 },
+  { "nombreDolencia": "FIEBRE_PERSISTENTE", "nivelPrioridad": 2 },
+  { "nombreDolencia": "DOLOR_ABDOMINAL", "nivelPrioridad": 2 },
+  { "nombreDolencia": "VOMITO_CON_SANGRE", "nivelPrioridad": 2 },
+
+  { "nombreDolencia": "DOLOR_DE_CABEZA", "nivelPrioridad": 1 }
+
+]

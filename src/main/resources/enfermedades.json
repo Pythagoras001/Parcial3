@@ -1,0 +1,11 @@
+[
+  { "nombreEnfermedad": "CANCER", "nivelPrioridad": 3 },
+  { "nombreEnfermedad": "INSUFICIENCIA_CARDIACA", "nivelPrioridad": 3 },
+  { "nombreEnfermedad": "EPOC", "nivelPrioridad": 3 },
+
+  { "nombreEnfermedad": "HIPERTENSION", "nivelPrioridad": 2 },
+  { "nombreEnfermedad": "DIABETES", "nivelPrioridad": 2 },
+  { "nombreEnfermedad": "ANTECEDENTE_CARDIOVASCULAR", "nivelPrioridad": 2 },
+
+  { "nombreEnfermedad": "NINGUNO", "nivelPrioridad": 0 }
+]

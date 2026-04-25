@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Archivo de configuración de Log4j2.
+    Define cómo, dónde y con qué formato se escriben los logs.
+-->
+<Configuration status="WARN">
+    <!--
+        status="WARN":
+        Nivel de logs internos de Log4j2.
+        Solo muestra advertencias o errores del propio framework
+        (NO es el nivel de logs de tu aplicación).
+    -->
+
+    <Appenders>
+        <!--
+            Los Appenders definen los DESTINOS del log
+            (consola, archivo, base de datos, etc.)
+        -->
+
+        <!-- ===== Appender de Consola ===== -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!--
+                name="Console": nombre del appender (se usará más adelante)
+                target="SYSTEM_OUT": imprime en la salida estándar (consola)
+            -->
+
+            <PatternLayout
+                    pattern="%d{HH:mm:ss} %-5level %logger{36} - %msg%n"/>
+            <!--
+                PatternLayout define el formato del mensaje:
+
+                %d{HH:mm:ss}  → hora del log
+                %-5level      → nivel del log (INFO, ERROR, WARN)
+                %logger{36}   → nombre de la clase (máx 36 caracteres)
+                %msg          → mensaje del log
+                %n            → salto de línea
+            -->
+        </Console>
+
+        <!-- ===== Appender de Archivo ===== -->
+        <File name="FileAppender" fileName="logs/app.log">
+            <!--
+                name="FileAppender": nombre del appender
+                fileName="logs/app.log": ruta del archivo de logs
+                (se crea automáticamente si no existe)
+            -->
+
+            <PatternLayout
+                    pattern="%d{HH:mm:ss} %-5level %logger{36} - %msg%n"/>
+            <!--
+                Se usa el mismo formato que en la consola
+            -->
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <!--
+            Los Loggers definen QUÉ nivel se registra
+            y QUÉ appenders se utilizan
+        -->
+
+        <Root level="info">
+            <!--
+                Root logger:
+                Aplica a TODA la aplicación
+
+                level="info":
+                Se registran INFO, WARN, ERROR y FATAL
+                (DEBUG y TRACE se ignoran)
+            -->
+
+            <!-- Enviar logs a la consola -->
+            <AppenderRef ref="Console"/>
+
+            <!-- Enviar logs al archivo -->
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
